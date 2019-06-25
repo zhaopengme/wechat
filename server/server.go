@@ -4,14 +4,13 @@ import (
 	"encoding/xml"
 	"errors"
 	"fmt"
+	"github.com/zhaopengme/wechat/context"
+	"github.com/zhaopengme/wechat/message"
+	"github.com/zhaopengme/wechat/util"
 	"io/ioutil"
 	"reflect"
 	"runtime/debug"
 	"strconv"
-
-	"github.com/silenceper/wechat/context"
-	"github.com/silenceper/wechat/message"
-	"github.com/silenceper/wechat/util"
 )
 
 //Server struct

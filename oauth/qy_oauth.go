@@ -3,9 +3,8 @@ package oauth
 import (
 	"encoding/json"
 	"fmt"
+	"github.com/zhaopengme/wechat/util"
 	"net/url"
-
-	"github.com/silenceper/wechat/util"
 )
 
 var (

@@ -3,9 +3,7 @@ package miniprogram
 import (
 	"encoding/json"
 	"fmt"
-
-	"github.com/silenceper/wechat/util"
-)
+	"github.com/zhaopengme/wechat/util")
 
 const (
 	// 获取用户访问小程序日留存

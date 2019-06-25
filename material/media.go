@@ -3,8 +3,7 @@ package material
 import (
 	"encoding/json"
 	"fmt"
-
-	"github.com/silenceper/wechat/util"
+	"github.com/zhaopengme/wechat/util"
 )
 
 //MediaType 媒体文件类型

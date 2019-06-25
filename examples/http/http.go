@@ -2,28 +2,26 @@ package main
 
 import (
 	"fmt"
+	"github.com/zhaopengme/wechat/message"
 	"net/http"
 
-	"github.com/silenceper/wechat"
-	"github.com/silenceper/wechat/message"
+	"github.com/zhaopengme/wechat"
 )
 
 func hello(rw http.ResponseWriter, req *http.Request) {
 
 	//配置微信参数
 	config := &wechat.Config{
-		AppID:          "your app id",
-		AppSecret:      "your app secret",
-		Token:          "your token",
-		EncodingAESKey: "your encoding aes key",
+		AppID:          "wxbb07c629e06e6c2c",
+		AppSecret:      "18dfd6262488279413d45ef2eb2fb750",
+		Token:          "pmewebchat",
+		EncodingAESKey: "abcdefghijklmnopqrstuvwxyz0123456789ABCDEFG",
 	}
 	wc := wechat.NewWechat(config)
-
 	// 传入request和responseWriter
 	server := wc.GetServer(req, rw)
 	//设置接收消息的处理方法
 	server.SetMessageHandler(func(msg message.MixMessage) *message.Reply {
-
 		//回复消息：演示回复用户发送的消息
 		text := message.NewText(msg.Content)
 		return &message.Reply{MsgType: message.MsgTypeText, MsgData: text}

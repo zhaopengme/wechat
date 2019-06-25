@@ -3,8 +3,7 @@ package miniprogram
 import (
 	"encoding/json"
 	"fmt"
-
-	"github.com/silenceper/wechat/util"
+	"github.com/zhaopengme/wechat/util"
 )
 
 const (

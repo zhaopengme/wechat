@@ -3,9 +3,8 @@ package menu
 import (
 	"encoding/json"
 	"fmt"
-
-	"github.com/silenceper/wechat/context"
-	"github.com/silenceper/wechat/util"
+	"github.com/zhaopengme/wechat/context"
+	"github.com/zhaopengme/wechat/util"
 )
 
 const (

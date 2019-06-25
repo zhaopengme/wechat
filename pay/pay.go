@@ -4,11 +4,10 @@ import (
 	"bytes"
 	"encoding/xml"
 	"errors"
+	"github.com/zhaopengme/wechat/context"
+	"github.com/zhaopengme/wechat/util"
 	"sort"
 	"strconv"
-
-	"github.com/silenceper/wechat/context"
-	"github.com/silenceper/wechat/util"
 )
 
 var payGateway = "https://api.mch.weixin.qq.com/pay/unifiedorder"
@@ -93,16 +92,16 @@ func (pcf *Pay) PrePayOrder(p *Params) (payOrder PreOrder, err error) {
 	param["appid"] = pcf.AppID
 	param["body"] = p.Body
 	param["mch_id"] = pcf.PayMchID
-	param["nonce_str"] =nonceStr
-	param["notify_url"] =pcf.PayNotifyURL
-	param["out_trade_no"] =p.OutTradeNo
-	param["spbill_create_ip"] =p.CreateIP
-	param["total_fee"] =p.TotalFee
-	param["trade_type"] =p.TradeType
+	param["nonce_str"] = nonceStr
+	param["notify_url"] = pcf.PayNotifyURL
+	param["out_trade_no"] = p.OutTradeNo
+	param["spbill_create_ip"] = p.CreateIP
+	param["total_fee"] = p.TotalFee
+	param["trade_type"] = p.TradeType
 	param["openid"] = p.OpenID
 
-	bizKey := "&key="+pcf.PayKey
-	str := orderParam(param,bizKey)
+	bizKey := "&key=" + pcf.PayKey
+	str := orderParam(param, bizKey)
 	sign := util.MD5Sum(str)
 	request := payRequest{
 		AppID:          pcf.AppID,

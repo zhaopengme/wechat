@@ -3,9 +3,8 @@ package context
 import (
 	"encoding/json"
 	"fmt"
+	"github.com/zhaopengme/wechat/util"
 	"time"
-
-	"github.com/silenceper/wechat/util"
 )
 
 const (

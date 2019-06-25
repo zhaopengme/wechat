@@ -3,11 +3,10 @@ package oauth
 import (
 	"encoding/json"
 	"fmt"
+	"github.com/zhaopengme/wechat/context"
+	"github.com/zhaopengme/wechat/util"
 	"net/http"
 	"net/url"
-
-	"github.com/silenceper/wechat/context"
-	"github.com/silenceper/wechat/util"
 )
 
 const (

@@ -1,10 +1,9 @@
 package context
 
 import (
+	"github.com/zhaopengme/wechat/cache"
 	"net/http"
 	"sync"
-
-	"github.com/silenceper/wechat/cache"
 )
 
 // Context struct
